@@ -45,5 +45,31 @@ namespace WordChecker.TestTools{
       Assert.AreEqual(1, result);
     }
 
+    [TestMethod]
+    public void GetCount_GetTwoCount_Int()
+    {
+    //Arrange
+      string keyWord = "sentence";
+      string sentence = "This is a sentence sentence.";
+      WordCheckerVariable WordCheckerInst = new WordCheckerVariable(keyWord, sentence);
+      //Act
+      int result = WordCheckerInst.GetCount();
+      //Assert
+      Assert.AreEqual(2, result);
+    }
+
+    [TestMethod]
+    public void GetCount_GetZeroCount_Int()
+    {
+    //Arrange
+      string keyWord = "sentence";
+      string sentence = "This is a fail test.";
+      WordCheckerVariable WordCheckerInst = new WordCheckerVariable(keyWord, sentence);
+      //Act
+      int result = WordCheckerInst.GetCount();
+      //Assert
+      Assert.AreEqual(0, result);
+    }
+    
   }
 }
