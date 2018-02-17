@@ -13,19 +13,33 @@ namespace WordChecker.TestTools{
     {
       //Arrange
       string word = "word";
-      WordCheckerVariable newWord = new WordCheckerVariable(word);
+      WordCheckerVariable WordCheckerInst = new WordCheckerVariable(word, "");
 
       //Act
-      string result = newWord.GetKeyWord();
+      string keyWordResult = WordCheckerInst.GetKeyWord();
 
       //Assert
-      Assert.AreEqual(word, result);
+      Assert.AreEqual(word, keyWordResult);
     }
+    [TestMethod]
+    public void GetSentence_ReturnSentenced_String()
+    {
+      //Arrange
+      string sentence = "This is a sentence.";
+      WordCheckerVariable WordCheckerInst = new WordCheckerVariable("", sentence);
+
+      //Act
+      string sentenceResult = WordCheckerInst.GetSentence();
+
+      //Assert
+      Assert.AreEqual(sentence, sentenceResult);
+    }
+
     // // [TestMethod]
     // // public void SplitTextToWords_TextToWordsList_WordsList()
     // // {
     // //    //Arrange
-    //       string description = "Walk the dog.";
+    //       string sentence = "This is a sentence."
     //       Item newItem = new Item(description);
     //
     //       //Act
