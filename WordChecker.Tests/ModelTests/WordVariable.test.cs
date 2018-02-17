@@ -14,7 +14,6 @@ namespace WordChecker.TestTools{
       //Arrange
       string word = "word";
       WordCheckerVariable WordCheckerInst = new WordCheckerVariable(word, "");
-
       //Act
       string keyWordResult = WordCheckerInst.GetKeyWord();
 
@@ -27,27 +26,24 @@ namespace WordChecker.TestTools{
       //Arrange
       string sentence = "This is a sentence.";
       WordCheckerVariable WordCheckerInst = new WordCheckerVariable("", sentence);
-
       //Act
       string sentenceResult = WordCheckerInst.GetSentence();
-
       //Assert
       Assert.AreEqual(sentence, sentenceResult);
     }
 
-    // // [TestMethod]
-    // // public void SplitTextToWords_TextToWordsList_WordsList()
-    // // {
-    // //    //Arrange
-    //       string sentence = "This is a sentence."
-    //       Item newItem = new Item(description);
-    //
-    //       //Act
-    //       string result = newItem.GetDescription();
-    //
-    //       //Assert
-    //       Assert.AreEqual(description, result);
-    // // }
+    [TestMethod]
+    public void GetCount_GetOneCount_Int()
+    {
+    //Arrange
+      string keyWord = "sentence";
+      string sentence = "This is a sentence.";
+      WordCheckerVariable WordCheckerInst = new WordCheckerVariable(keyWord, sentence);
+      //Act
+      int result = WordCheckerInst.GetCount();
+      //Assert
+      Assert.AreEqual(1, result);
+    }
 
   }
 }
