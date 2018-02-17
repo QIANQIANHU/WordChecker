@@ -22,10 +22,15 @@ namespace WordChecker.Models
     {
       return _sentence;
     }
-    public int GetCount()
+
+    private int GetCountInt()
     {
-      char[] charsToTrim = { '.', ',' ,'!', ' '};
+       char[] charsToTrim = { '.', ',' ,'!', ' '};  //trim off all these chars from begin or end of the string.
        string trimmedSentence = _sentence.Trim(charsToTrim);
+
+       if (trimmedSentence.Length == 0 || _keyWord.Length == 0)
+           return 0;
+
        int count = 0;
        // Split string on spaces.
        // ... This will separate all the words.
@@ -40,6 +45,8 @@ namespace WordChecker.Models
        return count;
     }
 
-
+    public string GetCount() {
+       return GetCountInt().ToString();
+    }
   }
 }

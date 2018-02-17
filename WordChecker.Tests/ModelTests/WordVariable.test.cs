@@ -42,7 +42,7 @@ namespace WordChecker.TestTools{
       //Act
       int result = WordCheckerInst.GetCount();
       //Assert
-      Assert.AreEqual(1, result);
+      Assert.AreEqual("1", result);
     }
 
     [TestMethod]
@@ -55,7 +55,7 @@ namespace WordChecker.TestTools{
       //Act
       int result = WordCheckerInst.GetCount();
       //Assert
-      Assert.AreEqual(2, result);
+      Assert.AreEqual("2", result);
     }
 
     [TestMethod]
@@ -68,8 +68,8 @@ namespace WordChecker.TestTools{
       //Act
       int result = WordCheckerInst.GetCount();
       //Assert
-      Assert.AreEqual(0, result);
+      Assert.AreEqual("0", result);
     }
-    
+
   }
 }
