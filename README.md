@@ -6,11 +6,11 @@
 
 ## Description
 
-This webpage will help user to check if a key word appears in a sentence, and display the frequency on the webpage.
+This webpage will help users to check if a key word appears in a sentence, and display the frequency on the webpage.
 
 ## Setup/Installation Requirements
 
-* Copy repository from GitHub to your computer using Terminal command $ git clone and then run with dotnet run command line on your Terminal;
+* Copy repository from GitHub to your computer using Terminal command $ git clone and then run with "dotnet run" command line on your Terminal;
 * Copy and paste the link(http://localhost:5000) to your browser.
 
 
