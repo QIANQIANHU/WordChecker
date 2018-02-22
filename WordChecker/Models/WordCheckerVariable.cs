@@ -23,7 +23,7 @@ namespace WordChecker.Models
       return _sentence;
     }
 
-    private int GetCountInt()
+    public int GetCountInt()
     {
        char[] charsToTrim = { '.', ',' ,'!', ' '};  //trim off all these chars from begin or end of the string.
        string trimmedSentence = _sentence.Trim(charsToTrim);
@@ -45,8 +45,5 @@ namespace WordChecker.Models
        return count;
     }
 
-    public string GetCount() {
-       return GetCountInt().ToString();
-    }
   }
 }
