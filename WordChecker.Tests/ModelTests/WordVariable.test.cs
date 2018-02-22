@@ -40,9 +40,9 @@ namespace WordChecker.TestTools{
       string sentence = "This is a sentence.";
       WordCheckerVariable WordCheckerInst = new WordCheckerVariable(keyWord, sentence);
       //Act
-      int result = WordCheckerInst.GetCount();
+      int result = WordCheckerInst.GetCountInt();
       //Assert
-      Assert.AreEqual("1", result);
+      Assert.AreEqual(1, result);
     }
 
     [TestMethod]
@@ -53,9 +53,9 @@ namespace WordChecker.TestTools{
       string sentence = "This is a sentence sentence.";
       WordCheckerVariable WordCheckerInst = new WordCheckerVariable(keyWord, sentence);
       //Act
-      int result = WordCheckerInst.GetCount();
+      int result = WordCheckerInst.GetCountInt();
       //Assert
-      Assert.AreEqual("2", result);
+      Assert.AreEqual(2, result);
     }
 
     [TestMethod]
@@ -66,9 +66,9 @@ namespace WordChecker.TestTools{
       string sentence = "This is a fail test.";
       WordCheckerVariable WordCheckerInst = new WordCheckerVariable(keyWord, sentence);
       //Act
-      int result = WordCheckerInst.GetCount();
+      int result = WordCheckerInst.GetCountInt();
       //Assert
-      Assert.AreEqual("0", result);
+      Assert.AreEqual(0, result);
     }
 
   }
